@@ -1,0 +1,32 @@
+[
+  {
+    "id": "123",
+    "company": "Tesla",
+    "title": "Backend Developer",
+    "country": "Argentina",
+    "modality": "remote",
+    "description": "As a Back End Developer, you will work in a cross-functional team environment with other engineers",
+    "skills": ["PHP", "Javascrip", "MySQL"],
+    "salary": "2500"
+  },
+  {
+    "id": "456",
+    "company": "Google",
+    "title": "PHP Developer",
+    "country": "Argentina",
+    "modality": "hybrid",
+    "description": "We look forward to having you as part of our team in the role of PHP Developer profile",
+    "skills": ["PHP", "Laravel"],
+    "salary": "3000"
+  },
+  {
+    "id": "789",
+    "company": "OpenIA",
+    "title": "Fullstack Developer",
+    "country": "Latam",
+    "modality": "remote",
+    "description": "We are seeking a Senior Fullstack Engineer to join our dynamic team",
+    "skills": ["Javascript", "React", "mongoDB"],
+    "salary": "2800"
+  }
+]
