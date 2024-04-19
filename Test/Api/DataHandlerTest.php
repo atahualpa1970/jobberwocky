@@ -12,8 +12,8 @@ class DataHandlerTest extends TestCase {
 	private $filename = 'test_data.json';
 
 	public function setUp(): void {
-			parent::setUp();
-			file_put_contents($this->filename, '');
+		parent::setUp();
+		file_put_contents($this->filename, '');
 	}
 
 	public function tearDown(): void {

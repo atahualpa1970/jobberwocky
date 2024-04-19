@@ -11,6 +11,7 @@ class ImportDataHelperTest extends TestCase {
 
 	public function testSouldGetDataFromExtraSource() {
 		$data = ImportDataHelper::getFromJabberWockyExtraSource();
+		$transform = ImportDataHelper::transformJabberWockyExtraSource($data);
     $this->assertNotEmpty($data);
 	}
 

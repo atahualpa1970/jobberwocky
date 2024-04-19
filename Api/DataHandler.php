@@ -10,7 +10,6 @@ class DataHandler {
 	}
 
 	public function saveData($data) {
-		var_dump($data);
 		$jsonData = json_encode($data, JSON_PRETTY_PRINT);
 		file_put_contents($this->file, $jsonData);
 	}

@@ -11,30 +11,19 @@ class ImportDataHelper {
 	}
 
 	public static function transformJabberWockyExtraSource(array $data): array {
-		foreach ($data as $key => $value) {
-			print_r('0 ');
-			//$obj = new stdClass();
-			/*
-			$obj->$key = $value;
-			$transform[] = $obj;
-			$transform[] = {
-				"id": "456",
-				"company": "Google",
-				"title": "PHP Developer",
-				"country": "Argentina",
-				"modality": "hybrid",
-				"description": "We look forward to having you as part of our team in the role of PHP Developer profile",
-				"skills": [
-						"PHP",
-						"Laravel"
-				],
-				"salary": "3000"
-			}
-			*/
+		foreach ($data as $value) {
+			$transform[] = [
+				"id" => rand(100, 999),
+				"company" => "",
+				"title" => $value[0],
+				"country" => $value[2],
+				"location" => "",
+				"description" => "",
+				"skills" => $value[3],
+				"salary" => (int)$value[1],
+			];
 		}
-
-		//return json_decode($transform, true);
-		return $data;
+		return $transform;
 	}
 }
 ?>
