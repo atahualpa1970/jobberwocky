@@ -46,11 +46,19 @@ class RestHandler
 
 	private function handlePostRequest()
 	{
-		$data = json_decode(file_get_contents('php://input'), true);
-		$datos = $this->jsonHandler->loadData();
-		$datos[] = $data;
-		$this->jsonHandler->saveData($datos);
-		echo "Data successfully saved.";
+    $new_data = [
+			'company' => $_POST['company'],
+			'title' => $_POST['title'],
+			'country' => $_POST['country'],
+			'location' => $_POST['location'],
+			'description' => $_POST['description'],
+			'skills' => explode(',', $_POST['skills']),
+			'salary' => $_POST['salary']
+    ];
+    $data = $this->jsonHandler->loadData();
+    $data[] = $new_data;
+    $this->jsonHandler->saveData($data);
+    echo "Data successfully saved.";
 	}
 
 	private function importExtraSource(): array {
